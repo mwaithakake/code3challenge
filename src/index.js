@@ -6,7 +6,7 @@ let Runtime = document.getElementById("runtime")
 let FilmInfo = document.getElementById("film-info")
 let Showtime = document.getElementById("showtime")
 let Remainingtickets = document.getElementById("ticket-num")
-let url = "https://json-server-5-k1mc.onrender.com/films";
+let url = "https://json-server-5-k1mc.onrender.com/films/";
 
 //Fetch film data from the server
 function getFilm(){
@@ -140,6 +140,9 @@ function deleteFilm(movie){
         body: JSON.stringify(requestBody)
     })
     .then (response => response.json())
-    .then (data => getFilm())
+    .then (data => getFilm(data))
     .catch (error => console.log(error.message));
 }
+
+
+
