@@ -112,7 +112,7 @@ function buyTicket(movies){
             "number_of_tickets": numberOfTickets
          }
 //sending a post request update tickets sold for the current film
-        fetch("http://localhost:3000/tickets",{
+        fetch(url,{
             method: "POST",
             headers: requestHeaders,    
             body: JSON.stringify(RequestBodyTickets)
